@@ -42,6 +42,11 @@ namespace AdventOfCodeApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(builder => builder
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
